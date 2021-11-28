@@ -31,7 +31,7 @@ class CreateProductShopRelationTable extends Migration
      */
     public function down()
     {
-        Schema::table('contact_person_provider', function (Blueprint $table) {
+        Schema::table('product__shop', function (Blueprint $table) {
             $table->dropForeign('product_id');
             $table->dropForeign('shop_id');
         });

@@ -31,7 +31,7 @@ class CreateProductCategoryRelationTable extends Migration
      */
     public function down()
     {
-        Schema::table('contact_person_provider', function (Blueprint $table) {
+        Schema::table('product__category', function (Blueprint $table) {
             $table->dropForeign('product_id');
             $table->dropForeign('product_category_id');
         });
