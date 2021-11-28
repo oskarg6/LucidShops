@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProductPrividerCompanyTable extends Migration
+class CreateProductCategoryTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class CreateProductPrividerCompanyTable extends Migration
      */
     public function up()
     {
-        Schema::create('product_privider_company', function (Blueprint $table) {
+        Schema::create('product_category', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('slug');
+            $table->text('description');
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ class CreateProductPrividerCompanyTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('product_privider_company');
+        Schema::dropIfExists('product_category');
     }
 }
