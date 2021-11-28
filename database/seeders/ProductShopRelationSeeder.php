@@ -4,9 +4,8 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Str;
 
-class ProductSeeder extends Seeder
+class ProductShopRelationSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,11 +15,9 @@ class ProductSeeder extends Seeder
     public function run()
     {
         for ($i = 0; $i < 10; $i++) {
-            DB::table('product')->insert([
-                'name' => 'product '.$i,
-                'slug' => 'product-'.$i,
-                'description' => Str::random(10),
-                'price' => $i,
+            DB::table('product__shop')->insert([
+                'product_id' => $i + 1,
+                'shop_id' => $i + 1,
             ]);
         }
     }
