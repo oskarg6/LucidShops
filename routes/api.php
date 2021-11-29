@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GetProducProviderCompanyProductsController;
 use App\Http\Controllers\GetShopsOrdersController;
 use App\Http\Controllers\ProductProviderCompanyController;
 use Illuminate\Http\Request;
@@ -27,3 +28,4 @@ Route::patch('/product-provider-company/{id}', [ProductProviderCompanyController
 Route::delete('/product-provider-company/{id}', [ProductProviderCompanyController::class, 'delete']);
 
 Route::get('/shop/{shopId}/order', [GetShopsOrdersController::class, 'getFromShop']);
+Route::get('/product-provider-company/{id}/product', [GetProducProviderCompanyProductsController::class, 'getFromCompany']);
