@@ -4,6 +4,7 @@ use App\Http\Controllers\GetMostSellProductByShopController;
 use App\Http\Controllers\GetMostSellShopsController;
 use App\Http\Controllers\GetProducProviderCompanyProductsController;
 use App\Http\Controllers\GetShopsOrdersController;
+use App\Http\Controllers\GetUserMostPurchaseController;
 use App\Http\Controllers\ProductProviderCompanyController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -33,3 +34,4 @@ Route::get('/shop/{shopId}/order', [GetShopsOrdersController::class, 'getFromSho
 Route::get('/product-provider-company/{id}/product', [GetProducProviderCompanyProductsController::class, 'getFromCompany']);
 Route::get('/shop/{shopId}/most-sell-products', [GetMostSellProductByShopController::class, 'get']);
 Route::get('/shop/most-sell', [GetMostSellShopsController::class, 'get']);
+Route::get('/user/most-purchase', [GetUserMostPurchaseController::class, 'get']);
