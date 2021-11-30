@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GetMostSellProductByShopController;
 use App\Http\Controllers\GetProducProviderCompanyProductsController;
 use App\Http\Controllers\GetShopsOrdersController;
 use App\Http\Controllers\ProductProviderCompanyController;
@@ -29,3 +30,4 @@ Route::delete('/product-provider-company/{id}', [ProductProviderCompanyControlle
 
 Route::get('/shop/{shopId}/order', [GetShopsOrdersController::class, 'getFromShop']);
 Route::get('/product-provider-company/{id}/product', [GetProducProviderCompanyProductsController::class, 'getFromCompany']);
+Route::get('/shop/{shopId}/most-sell-products', [GetMostSellProductByShopController::class, 'get']);

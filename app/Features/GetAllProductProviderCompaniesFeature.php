@@ -9,7 +9,7 @@ use Lucid\Units\Feature;
 
 class GetAllProductProviderCompaniesFeature extends Feature
 {
-    public function handle(Request $request)
+    public function handle()
     {
         $companies = $this->run(GetAllProductProviderCompaniesJob::class, []);
 
