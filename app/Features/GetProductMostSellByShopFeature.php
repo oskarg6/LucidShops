@@ -9,6 +9,9 @@ use Illuminate\Http\Request;
 use Lucid\Domains\Http\Jobs\RespondWithJsonJob;
 use Lucid\Units\Feature;
 
+/**
+ * Get a ranking of shop's products ordered by sells quantity ASC
+ */
 class GetProductMostSellByShopFeature extends Feature
 {
     public function handle(Request $request)

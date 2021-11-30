@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 use Lucid\Domains\Http\Jobs\RespondWithJsonJob;
 use Lucid\Units\Feature;
 
+/**
+ * Get all products from a company
+ */
 class GetAllProductsFromProviderCompanyFeature extends Feature
 {
     public function handle(Request $request)
