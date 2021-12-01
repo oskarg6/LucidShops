@@ -3,6 +3,7 @@
 namespace App\Operations;
 
 use App\Domains\Shop\Jobs\GetShopJob;
+use App\Exceptions\ResourceNotFoundException;
 use App\Repositories\ProductRepository;
 use Lucid\Units\Operation;
 
@@ -32,6 +33,10 @@ class GetMostSellProductsByShopOperation extends Operation
         $shop = $this->run(GetShopJob::class, [
             'id' => $this->shopId,
         ]);
+
+        if (empty($shop)) {
+            throw new ResourceNotFoundException();
+        }
 
         return $this->productRepository->getMostSellsByShop($shop);
     }
